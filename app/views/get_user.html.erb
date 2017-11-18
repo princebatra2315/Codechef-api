@@ -1,0 +1,12 @@
+<form>
+	<input type="text" id="username" />
+	<input type="button" value="submit" onclick="getusername()">
+</form>
+<%= link_to 'Continue', getuser_get_user_path, :id => 'Continue_path' %>
+<script type="text/javascript">
+	function getusername(){
+		var user = document.getElementById("username").value;
+		var url = $('#Continue_path').attr('href') + '?user=' + user;
+		$('#Continue_path').attr('href',url);
+	}
+</script>
